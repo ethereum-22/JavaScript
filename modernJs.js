@@ -1,545 +1,586 @@
-// //Array Destructing:A basically way of unpacking values from an array or object into separates value
-
-// // 'use strict';
-// // ES6 object enhanced
-// // const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri'];
-// // const hours = {
-// //   [weekdays[3]]: {
-// //     open: 12,
-// //     close: 12,
-// //   },
-// //   [weekdays[5]]: {
-// //     open: 11,
-// //     close: 23,
-// //   },
-// //   [weekdays[2]]: {
-// //     open: 0,
-// //     close: 24,
-// //   },
-// // };
-// const resturant = {
-//   name: 'Classico Italianio',
-//   location: 'Via Angelo Tavanti 23,Firenze,Italy',
-//   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-//   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-//   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-
-//   // ES6 enhanced object litearls for object,method1
-//   // hours,
-//   // ES6 object literals for writing method2
-//   order(starterIndex, mainIndex) {
-//     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-//   },
-
-//   // ES6 object inhanced method3
-//   //   const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri'];
-//   // const hours = {
-//   //   [weekdays[3]]: {
-//   //     open: 12,
-//   //     close: 12,
-//   //   },
-//   //   [weekdays[5]]: {
-//   //     open: 11,
-//   //     close: 23,
-//   //   },
-//   //   [weekdays[2]]: {
-//   //     open: 0,
-//   //     close: 24,
-//   //   },
-//   // };
-
-//   orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
-//     console.log(`Order Received!! ${this.starterMenu[starterIndex]} and
-//     ${this.mainMenu[mainIndex]} will delivered to ${address} at ${time}.`);
-//   },
-//   orderPasta: function (ing1, ing2, ing3) {
-//     console.log(
-//       `Here is your delicious Pasta with ${ing1}, ${ing2} and ${ing3} `
-//     );
-//   },
-
-//   orderPizza: function (mianIngredient, ...other) {
-//     console.log(mianIngredient);
-//     console.log(other);
-//   },
-//   openingHours: {
-//     thu: {
-//       open: 12,
-//       close: 12,
-//     },
-//     fri: {
-//       open: 11,
-//       close: 23,
-//     },
-//     sat: {
-//       open: 0,
-//       close: 24,
-//     },
-//   },
-// };
-
-// // resturant.orderDelivery({
-// //   time: '22:30',
-// //   address: 'Via Del Sole,21',
-// //   mainIndex: 2,
-// //   starterIndex: 2,
-// // });
-
-// // Object Destructing
-// // to destruct object we use carly braces because we created object with carly braces
-// // For destructing we use to the exact property name which we use in object.In object basically order of property doesn't matter and for that we don't need to skip a variable in similar to destruct array;
-
-// // const { name, openingHours, location } = resturant;
-// // console.log(name);
-// // console.log(openingHours);
-// // console.log(location);
-
-// // Use other name and handle this situation when destructing object
-// // const {
-// //   name: resturantName,
-// //   openingHours: hours,
-// //   categories: tags,
-// // } = resturant;
+//Array Destructing:A basically way of unpacking values from an array or object into separates value
+/*
+'use strict';
+//ES6 object enhanced
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri'];
+const hours = {
+  [weekdays[3]]: {
+    open: 12,
+    close: 12,
+  },
+  [weekdays[5]]: {
+    open: 11,
+    close: 23,
+  },
+  [weekdays[2]]: {
+    open: 0,
+    close: 24,
+  },
+};
+
+*/
+
+/*
+const resturant = {
+  name: 'Classico Italianio',
+  location: 'Via Angelo Tavanti 23,Firenze,Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+  // ES6 enhanced object litearls for object,method1
+  // hours,
+  // ES6 object literals for writing method2
+  order(starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  // ES6 object inhanced method3
+  //   const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri'];
+  // const hours = {
+  //   [weekdays[3]]: {
+  //     open: 12,
+  //     close: 12,
+  //   },
+  //   [weekdays[5]]: {
+  //     open: 11,
+  //     close: 23,
+  //   },
+  //   [weekdays[2]]: {
+  //     open: 0,
+  //     close: 24,
+  //   },
+  // };
+
+  orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
+    console.log(`Order Received!! ${this.starterMenu[starterIndex]} and
+    ${this.mainMenu[mainIndex]} will delivered to ${address} at ${time}.`);
+  },
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious Pasta with ${ing1}, ${ing2} and ${ing3} `
+    );
+  },
+
+  orderPizza: function (mianIngredient, ...other) {
+    console.log(mianIngredient);
+    console.log(other);
+  },
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 12,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0,
+      close: 24,
+    },
+  },
+};
+
+*/
+
+// resturant.orderDelivery({
+//   time: '22:30',
+//   address: 'Via Del Sole,21',
+//   mainIndex: 2,
+//   starterIndex: 2,
+// });
+
+
+/*
+// Object Destructing
+// to destruct object we use carly braces because we created object with carly braces
+// For destructing we use to the exact property name which we use in object.In object basically order of property doesn't matter and for that we don't need to skip a variable in similar to destruct array;
+
+const { name, openingHours, location } = resturant;
+console.log(name);
+console.log(openingHours);
+console.log(location);
 
-// // console.log(resturantName);
-// // console.log(hours);
-// // console.log(tags);
+Use other name and handle this situation when destructing object
+const {
+  name: resturantName,
+  openingHours: hours,
+  categories: tags,
+} = resturant;
 
-// // const { menu = [], starterMenu: item = [] } = resturant;
+console.log(resturantName);
+console.log(hours);
+console.log(tags);
 
-// // console.log(menu, item);
-// // Default variables in Object destructing
+const { menu = [], starterMenu: item = [] } = resturant;
 
-// // const { menu, starterMenu: item = [] } = resturant;
-// // console.log(menu, item); // the result of menu is undefined because it is not the property of resturant object
+console.log(menu, item);
+Default variables in Object destructing
 
-// // Mutating Variables
+const { menu, starterMenu: item = [] } = resturant;
+console.log(menu, item); // the result of menu is undefined because it is not the property of resturant object
 
-// // let m = 999,
-// //   n = 234;
-// // const obj = { m: 23, n: 7, c: 14 };
-// // ({ m, n } = obj);
-// // console.log(m, n);
 
-// // Nested Object
-// //const { fri } = resturant.openingHours;
-// // console.log(fri);
+*/
 
-// // const {
-// //   fri: { open, close },
-// // } = resturant.openingHours;
+/*
 
-// // console.log(fri);
-// // console.log(open);
-// // console.log(close);
+// Mutating Variables
 
-// // Destructing an array;
+let m = 999,
+  n = 234;
+const obj = { m: 23, n: 7, c: 14 };
+({ m, n } = obj);
+console.log(m, n);
 
-// //Traditional Method:
-// // let arr = [1, 2, 3, 5, 6];
-// // let a, b, c;
-// // a = arr[0];
-// // b = arr[1];
-// // c = arr[2];
+Nested Object
+const { fri } = resturant.openingHours;
+console.log(fri);
 
-// // Destructing Method
-// // let [p, q, r] = arr;
-// // console.log(p, q, r);
+const {
+  fri: { open, close },
+} = resturant.openingHours;
 
-// // const [first, second] = resturant.categories;
+console.log(fri);
+console.log(open);
+console.log(close);
 
-// // to skip any value and print the next
+*/
 
-// // let [main, , secondary] = resturant.categories;
-// // console.log(main, secondary);
+/*
 
-// // Swapping main and secondary
-// // Traditional Way
+// Destructing an array;
 
-// // let temp = main;
-// // main = secondary;
-// // secondary = temp;
-// // console.log(main, secondary);
+//Traditional Method:
+let arr = [1, 2, 3, 5, 6];
+let a, b, c;
+a = arr[0];
+b = arr[1];
+c = arr[2];
 
-// // By Using Destructing Method
-// // [secondary, main] = [main, secondary];
+// Destructing Method
+let [p, q, r] = arr;
+console.log(p, q, r);
 
-// // const [starter, maini] = resturant.order(2, 0);
-// // console.log(resturant.order(2, 0));
-// // console.log(starter, maini);
+const [first, second] = resturant.categories;
 
-// // Nested destructing
-// // const nested = [2, 4, [5, 6]];
-// // const [i, , j] = nested;
-// // console.log(i, j);
+//to skip any value and print the next
 
-// // const [i, , [j, k]] = nested;
-// // console.log(i, j, k);
+let [main, , secondary] = resturant.categories;
+console.log(main, secondary);
 
-// // We can set default value when we are extracting
-// // const [x, y, z = 0] = [8, 9];
-// // console.log(x, y, z);
 
-// // Spread Operators
+*/
+/*
 
-// // Traditional Method
-// // const newArray = [7, 8, 9];
-// // const badNewArray = [1, 2, newArray[0], newArray[1], newArray[2]];
-// // console.log(badNewArray);
 
-// // By using spread Operator\
-// // const newArr = [1, 2, ...newArray];
-// // console.log(newArr);
-// // console.log(...newArr);
+// Swapping main and secondary
+// Traditional Way
 
-// // const newMenu = [...resturant.mainMenu, 'Gnocci'];
-// // console.log(newMenu);
+let temp = main;
+main = secondary;
+secondary = temp;
+console.log(main, secondary);
 
-// // Copy Array
+//By Using Destructing Method
+[secondary, main] = [main, secondary];
 
-// // const mainMenuCopy = [...resturant.mainMenu];
-// // console.log(mainMenuCopy);
+const [starter, maini] = resturant.order(2, 0);
+console.log(resturant.order(2, 0));
+console.log(starter, maini);
 
-// // Join two arrrays or more together
-// // const menu = [...resturant.mainMenu, ...resturant.starterMenu];
-// // console.log(menu);
+//Nested destructing
+const nested = [2, 4, [5, 6]];
+const [i, , j] = nested;
+console.log(i, j);
 
-// // Spread Operator in String
-// // const str = 'Jonas';
-// // const letter = [...str];
-// // console.log(...str);
-// // console.log(letter);
+const [i, , [j, k]] = nested;
+console.log(i, j, k);
 
-// // Real World Example
-// // const ingredients = [
-// //   prompt("Let's make Pasta! Ingredient 1?"),
-// //   prompt("Let's make Pasta! Ingredient 2?"),
-// //   prompt("Let's make Pasta! Ingredient 3?"),
-// // ];
-// // console.log(ingredients);
+//We can set default value when we are extracting
+const [x, y, z = 0] = [8, 9];
+console.log(x, y, z);
 
-// // resturant.orderPasta(...ingredients);
+*/
 
-// // Objects
+/*
 
-// // const newResturant = { foundedIn: 1997, ...resturant, founder: 'Guiseppe' };
-// // console.log(newResturant);
+// Spread Operators
 
-// // const resturantCopy = { ...resturant };
-// // resturantCopy.name = 'Md Mehedi Hassan House';
-// // console.log(resturantCopy);
+// Traditional Method
 
-// // Destructing
+const newArray = [7, 8, 9];
+const badNewArray = [1, 2, newArray[0], newArray[1], newArray[2]];
+console.log(badNewArray);
 
-// // Spread because of right side of=
-// // const arr = [1, 2, ...[3, 4]];
+// By using spread Operator
 
-// // Rest because of left side of =
+const newArr = [1, 2, ...newArray];
+console.log(newArr);
+console.log(...newArr);
 
-// // const [a, b, ...others] = [1, 2, 3, 4, 5];
+const newMenu = [...resturant.mainMenu, 'Gnocci'];
+console.log(newMenu);
 
-// // console.log(a, b, others);
+// Copy Array
 
-// // const [pizza, , rissoto, ...otherFood] = [
-// //   ...resturant.mainMenu,
-// //   ...resturant.starterMenu,
-// // ];
+const mainMenuCopy = [...resturant.mainMenu];
+console.log(mainMenuCopy);
 
-// // console.log(pizza);
-// // console.log(rissoto);
-// // console.log(otherFood); /// Rest syntax collect all the value after last variable
+// Join two arrrays or more together
 
-// // and we could not do this
-// // const [pizza,rissoto,...otherFood,bread]=[...resturant.starterMenu,...resturant.mainMenu]
+const menu = [...resturant.mainMenu, ...resturant.starterMenu];
+console.log(menu);
 
-// // REST element must be the last element
+// Spread Operator in String
 
-// // Objects
+const str = 'Jonas';
+const letter = [...str];
+console.log(...str);
+console.log(letter);
 
-// // const { sat, ...weekDays } = resturant.openingHours;
-// // console.log(sat, weekDays);
+// Real World Example
+const ingredients = [
+  prompt("Let's make Pasta! Ingredient 1?"),
+  prompt("Let's make Pasta! Ingredient 2?"),
+  prompt("Let's make Pasta! Ingredient 3?"),
+];
+console.log(ingredients);
 
-// // Functions
+resturant.orderPasta(...ingredients);
 
-// // const add = function (...numbers) {
-// //   let sum = 0;
-// //   for (let i = 0; i < numbers.length; i++) {
-// //     sum += numbers[i];
-// //   }
-// //   // console.log(sum);
-// // };
 
-// // add(3, 4);
-// // add(2, 3, 2, 5, 6, 7);
-// // add(3, 4, 5, 2, 1, 7, 8, 40);
+*/
 
-// // const x = [23, 5, 7];
-// // add(...x);
-// // REST syntax is taking multiple numbers or multiple values and pack them all into an array
 
-// // Using REST parameter in resturant object different casses
+// Objects
+/*
+const newResturant = { foundedIn: 1997, ...resturant, founder: 'Guiseppe' };
+console.log(newResturant);
 
-// // resturant.orderPizza('Mashroom', 'Onion', 'Olives', 'Spinach');
+const resturantCopy = { ...resturant };
+resturantCopy.name = 'Md Mehedi Hassan House';
+console.log(resturantCopy);
 
-// /// Short Circuiting AND and OR Operator
+// Destructing
 
-// // Logical operator can use any data type,return any data type,they do shor circuiting or short circuit evaluation
+// Spread because of right side of=
 
-// // In case of OR operator short circuiting means that if the first value is a truthy value it willl immediately return the first value
+const arr = [1, 2, ...[3, 4]];
 
-// // console.log('---------OR--------');
-// // console.log(3 || 'Jonas');
-// // console.log('' || 'Jonas'); // empty string is a false value and that the reason it returns the second one 'Jonas'
-// // console.log(true || 0); // true is a truthy value and that is the reason it returns the first one
-// // console.log(undefined || null); // undefined is a falsy value
+// Rest because of left side of =
 
-// // console.log(undefined || 0 || '' || 'Hello' || 23 || null); // Hello here is the first truthy value and that the reason it returns Hello
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
 
-// // According to the working principle of OR operator if the first value is truty value then it don't saw the rest of the operation and it will short cirtcuit and return the first result
+const [pizza, , rissoto, ...otherFood] = [
+  ...resturant.mainMenu,
+  ...resturant.starterMenu,
+];
 
-// // const guest1 = resturant.numGuest ? resturant.numGuest : 10;
-// // console.log(guest1);
+console.log(pizza);
+console.log(rissoto);
+console.log(otherFood); /// Rest syntax collect all the value after last variable
 
-// // console.log('---------AND--------');
+and we could not do this
+const [pizza,rissoto,...otherFood,bread]=[...resturant.starterMenu,...resturant.mainMenu]
 
-// // AND operator short circuit when the first value is falsy and immediately returns the 0;
+REST element must be the last element
 
-// // AND operator returns the truty and evaluations continous and then simply the last value is returned
+Objects
 
-// // AND operator is only ture if all the operands are ture and if the first operands is false then it means the entire result of AND operations already be false anyway and there is no need to look any other operands
-// // console.log(0 && 'Jonas');
-// // console.log('Hello' && 23 && null && 'Jonas');
+const { sat, ...weekDays } = resturant.openingHours;
+console.log(sat, weekDays);
 
-// // if (resturant.orderPizza) {
-// //   resturant.orderPizza('mushroom', 'spnich');
-// // }
+*/
 
-// //Nulish Coalesching Operator
 
-// // NUllish : null and undefined(NOT 0 or '');
-// // const guestCorrect = resturant.numGuests ?? 10;
-// // console.log(guestCorrect);
+/*
 
-// // Looping over Arrays: for-of loop
-// // const menu = [...resturant.starterMenu, ...resturant.mainMenu];
+// Functions
 
-// // for (let item of menu) {
-// //   console.log(item);
-// // }
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  // console.log(sum);
+};
 
-// // // IN case of getting index
-// // for (let item of menu.entries()) {
-// //   console.log(item);
-// // }
+add(3, 4);
+add(2, 3, 2, 5, 6, 7);
+add(3, 4, 5, 2, 1, 7, 8, 40);
 
-// // for (let [i, el] of menu.entries()) {
-// //   console.log(`${i + 1}: ${el}`);
-// // }
+const x = [23, 5, 7];
+add(...x);
 
-// //Enhaanced object literals
 
-// // Optional Chaining
+// REST syntax is taking multiple numbers or multiple values and pack them all into an array
 
-// //  if a certain property doesn't exists then undefined is return immediately and that will that avoid that kind of error that we saw in erlier
+// Using REST parameter in resturant object different casses
 
-// // if (resturant.openingHours.mon) {
-// //   console.log(resturant.openingHours.mon.open);
-// // }
+// resturant.orderPizza('Mashroom', 'Onion', 'Olives', 'Spinach');
 
-// // if (resturant.openingHours.fri) {
-// //   console.log(resturant.openingHours.fri.open);
-// // }
+/// Short Circuiting AND and OR Operator
 
-// // if (resturant.openingHours && resturant.openingHours.mon) {
-// //   console.log(resturant.openingHours.mon.open);
-// // }
+// Logical operator can use any data type,return any data type,they do shor circuiting or short circuit evaluation
 
-// // With optional Chaining
+// In case of OR operator short circuiting means that if the first value is a truthy value it willl immediately return the first value
 
-// // console.log(resturant.openingHours.mon?.open);
+// console.log('---------OR--------');
+// console.log(3 || 'Jonas');
+// console.log('' || 'Jonas'); // empty string is a false value and that the reason it returns the second one 'Jonas'
+// console.log(true || 0); // true is a truthy value and that is the reason it returns the first one
+// console.log(undefined || null); // undefined is a falsy value
 
-// // the working method of the above line is ,when only the resturant.openingHours.mon is exists then open can be performed and if not then immmediately undefined is occured and exists is the nullish concept that we heared in before
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null); // Hello here is the first truthy value and that the reason it returns Hello
 
-// // The optional Chainging operator is (?.)
-// // console.log(resturant.openingHours?.mon?.open);
+// According to the working principle of OR operator if the first value is truty value then it don't saw the rest of the operation and it will short cirtcuit and return the first result
 
-// // Optional Chaing: Real World Example
-// // const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
-// // for (let day of days) {
-// //   console.log(day);
-// //   const open = resturant.openingHours[day]?.open ?? 'Closed';
-// //   console.log(`On ${day} we open at ${open}`);
-// // }
+// const guest1 = resturant.numGuest ? resturant.numGuest : 10;
+// console.log(guest1);
 
-// // Optional Chaining in Methods
-// // // We can check a method exists before calls it
-// // console.log(resturant.order?.(0, 1) ?? 'Method Does not exists.');
+// console.log('---------AND--------');
 
-// // A mehtod which is not in resturant object
-// // console.log(resturant.orderRissoto?.(0, 1) ?? 'Method Does not exists.');
+// AND operator short circuit when the first value is falsy and immediately returns the 0;
 
-// // Optional chaining works in Arrays
-// //
-// // const user = [
-// //   {
-// //     name: 'Jonas',
-// //     email: 'jonas@gmail.com',
-// //   },
-// // ];
+// AND operator returns the truty and evaluations continous and then simply the last value is returned
 
-// // console.log(user[0]?.name ?? 'User array empty');
+// AND operator is only ture if all the operands are ture and if the first operands is false then it means the entire result of AND operations already be false anyway and there is no need to look any other operands
+// console.log(0 && 'Jonas');
+// console.log('Hello' && 23 && null && 'Jonas');
 
-// // const user = [];
-// // console.log(user[0]?.name ?? 'User array Empty');
-
-// // Without optional chaining we do the same thing in that way
-// // if (user.length > 0) {
-// //   console.log(user[0].name);
-// // } else {
-// //   console.log('User Array Empty');
-// // }
-
-// /// Loooking object ,object_keys and values
-
-// /// Property Name:
-// // let properties = Object.keys(resturant.openingHours);
-// // console.log(properties);
-
-// // let openStr = `We are open ${properties.length} days: `;
-// // for (const day of properties) {
-// //   openStr += day;
-// // }
-// // console.log(openStr);
-
-// // Property values
-// // const values = Object.values(resturant.openingHours);
-// // console.log(values);
-
-// // Loop over object ,we use entries method and it returns index nummber and the element itself
-
-// // Entire Object
-// // const entries = Object.entries(resturant.openingHours);
-// // console.log(entries);
-
-// // for (const x of entries) {
-// //   console.log(x);
-// // }
-
-// // for (const [key, { open, close }] of entries) {
-// //   console.log(`On ${key} we open at ${open} and close at ${close}`);
-// // }
-
-// // Sets
-// // Set is a collection of unique values and holds mixed data types
-// /*
-// const orderSet = new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto']);
-// console.log(orderSet);
-// console.log(new Set('Jonas'));
-
-// // size of a set
-// console.log(orderSet.size);
-
-// // Check a certain element is in set
-// console.log(orderSet.has('Pasta'));
-// console.log(orderSet.has('Spinach'));
-
-// // Add new element in a set
-// orderSet.add('Garlic Bread');
-// orderSet.add('Garlic Bread');
-// orderSet.add('Garlic Bread');
-// console.log(orderSet);
-
-// // Delete elements form set
-// orderSet.delete('Risotto');
-// console.log(orderSet);
-// // Delete all of the element of the set
-// // orderSet.clear();
-// // console.log(orderSet);
-
-// // Sets are iterable
-// for (let order of orderSet) {
-//   console.log(order);
+// if (resturant.orderPizza) {
+//   resturant.orderPizza('mushroom', 'spnich');
 // }
 
-// // Example:
-// const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
-// const staffUnique = new Set(staff);
-// console.log(staffUnique);*/
+//Nulish Coalesching Operator
 
-// /// Map in JS
+// NUllish : null and undefined(NOT 0 or '');
+// const guestCorrect = resturant.numGuests ?? 10;
+// console.log(guestCorrect);
 
-// const rest = new Map();
-// rest.set('name', 'Classiano Italiano');
-// rest.set(1, 'Firenze,Italy');
-// // console.log(rest.set(2, 'Milano,Italy')); // Map methtod returns new set
-// // console.log(rest);
-// rest
-//   .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
-//   .set('open', 11)
-//   .set('close', 23)
-//   .set(true, 'We are open')
-//   .set(false, 'We are true');
+// Looping over Arrays: for-of loop
+// const menu = [...resturant.starterMenu, ...resturant.mainMenu];
 
-// // Read data form map we used to get method(pass in the name of the key)
-// const time = 21;
-// // console.log(rest.get('name'));
-// // console.log(rest.get(true));
-// // console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+// for (let item of menu) {
+//   console.log(item);
+// }
 
-// // how to check a map contains certain key
-// // console.log(rest.has('categories'));
+// // IN case of getting index
+// for (let item of menu.entries()) {
+//   console.log(item);
+// }
 
-// // Delete element form map
-// // console.log(rest.delete(2));
+// for (let [i, el] of menu.entries()) {
+//   console.log(`${i + 1}: ${el}`);
+// }
 
-// // Size of map
-// // console.log(rest.size);
+//Enhaanced object literals
 
-// // remove all the elements form the map
-// // rest.clear();
-// // console.log(rest);
-// // console.log(rest.size);
+// Optional Chaining
 
-// // Use array and object as a map keys
-// const arr = [1, 2];
-// rest.set(arr, 'Test');
-// // console.log(rest.get(arr));
+//  if a certain property doesn't exists then undefined is return immediately and that will that avoid that kind of error that we saw in erlier
 
-// // Map Iteration
-// const question = new Map([
-//   ['question', 'What is the best programming language in the world?'],
-//   [1, 'C'],
-//   [2, 'Java'],
-//   [3, 'JavaScript'],
-//   ['correct', 3],
-//   [true, 'Correct'],
-//   [false, 'Try Again'],
-// ]);
-// // console.log(question);
+// if (resturant.openingHours.mon) {
+//   console.log(resturant.openingHours.mon.open);
+// }
 
-// // Convert object to map
-// const hoursMap = new Map(Object.entries(resturant.openingHours));
-// // console.log(hoursMap);
+// if (resturant.openingHours.fri) {
+//   console.log(resturant.openingHours.fri.open);
+// }
 
-// // Iteration
-// // console.log(question.get('question'));
-// // for (let [key, value] of question) {
-// //   if (typeof key === 'number') {
-// //     console.log(`Answer ${key}: ${value}`);
-// //   }
-// // }
-// // const prompt = require('prompt-sync')();
-// // const answer = Number(prompt('Your Answer'));
-// // console.log(answer);
+// if (resturant.openingHours && resturant.openingHours.mon) {
+//   console.log(resturant.openingHours.mon.open);
+// }
 
-// // console.log(question.get(question.get('correct') === answer));
+// With optional Chaining
 
-// // Convert Map to Array
+// console.log(resturant.openingHours.mon?.open);
 
-// console.log([...question]);
-// console.log(question.entries());
-// console.log(question.keys());
-// console.log(question.values());
+// the working method of the above line is ,when only the resturant.openingHours.mon is exists then open can be performed and if not then immmediately undefined is occured and exists is the nullish concept that we heared in before
+
+// The optional Chainging operator is (?.)
+// console.log(resturant.openingHours?.mon?.open);
+
+// Optional Chaing: Real World Example
+// const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// for (let day of days) {
+//   console.log(day);
+//   const open = resturant.openingHours[day]?.open ?? 'Closed';
+//   console.log(`On ${day} we open at ${open}`);
+// }
+
+Optional Chaining in Methods
+// We can check a method exists before calls it
+console.log(resturant.order?.(0, 1) ?? 'Method Does not exists.');
+
+A mehtod which is not in resturant object
+console.log(resturant.orderRissoto?.(0, 1) ?? 'Method Does not exists.');
+
+Optional chaining works in Arrays
+
+const user = [
+  {
+    name: 'Jonas',
+    email: 'jonas@gmail.com',
+  },
+];
+
+console.log(user[0]?.name ?? 'User array empty');
+
+const user = [];
+console.log(user[0]?.name ?? 'User array Empty');
+
+Without optional chaining we do the same thing in that way
+if (user.length > 0) {
+  console.log(user[0].name);
+} else {
+  console.log('User Array Empty');
+}
+
+/ Loooking object ,object_keys and values
+
+/ Property Name:
+let properties = Object.keys(resturant.openingHours);
+console.log(properties);
+
+let openStr = `We are open ${properties.length} days: `;
+for (const day of properties) {
+  openStr += day;
+}
+console.log(openStr);
+
+Property values
+const values = Object.values(resturant.openingHours);
+console.log(values);
+
+Loop over object ,we use entries method and it returns index nummber and the element itself
+
+Entire Object
+const entries = Object.entries(resturant.openingHours);
+console.log(entries);
+
+for (const x of entries) {
+  console.log(x);
+}
+
+for (const [key, { open, close }] of entries) {
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
+
+Sets
+Set is a collection of unique values and holds mixed data types
+// 
+const orderSet = new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto']);
+console.log(orderSet);
+console.log(new Set('Jonas'));
+
+// size of a set
+console.log(orderSet.size);
+
+// Check a certain element is in set
+console.log(orderSet.has('Pasta'));
+console.log(orderSet.has('Spinach'));
+
+// Add new element in a set
+orderSet.add('Garlic Bread');
+orderSet.add('Garlic Bread');
+orderSet.add('Garlic Bread');
+console.log(orderSet);
+
+// Delete elements form set
+orderSet.delete('Risotto');
+console.log(orderSet);
+Delete all of the element of the set
+orderSet.clear();
+console.log(orderSet);
+
+// Sets are iterable
+for (let order of orderSet) {
+  console.log(order);
+}
+
+// Example:
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const staffUnique = new Set(staff);
+console.log(staffUnique);*/
+
+// // /// Map in JS
+/*
+const rest = new Map();
+rest.set('name', 'Classiano Italiano');
+rest.set(1, 'Firenze,Italy');
+console.log(rest.set(2, 'Milano,Italy')); // Map methtod returns new set
+console.log(rest);
+rest
+  .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open')
+  .set(false, 'We are true');
+
+// Read data form map we used to get method(pass in the name of the key)
+const time = 21;
+console.log(rest.get('name'));
+console.log(rest.get(true));
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+how to check a map contains certain key
+console.log(rest.has('categories'));
+
+Delete element form map
+console.log(rest.delete(2));
+
+Size of map
+console.log(rest.size);
+
+remove all the elements form the map
+rest.clear();
+console.log(rest);
+console.log(rest.size);
+
+// Use array and object as a map keys
+const arr = [1, 2];
+rest.set(arr, 'Test');
+// console.log(rest.get(arr));
+
+// Map Iteration
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct'],
+  [false, 'Try Again'],
+]);
+// console.log(question);
+
+// Convert object to map
+const hoursMap = new Map(Object.entries(resturant.openingHours));
+// console.log(hoursMap);
+
+Iteration
+console.log(question.get('question'));
+for (let [key, value] of question) {
+  if (typeof key === 'number') {
+    console.log(`Answer ${key}: ${value}`);
+  }
+}
+const prompt = require('prompt-sync')();
+const answer = Number(prompt('Your Answer'));
+console.log(answer);
+
+console.log(question.get(question.get('correct') === answer));
+
+// Convert Map to Array
+
+console.log([...question]);
+console.log(question.entries());
+console.log(question.keys());
+console.log(question.values());
 
 // Working with strings
 const airline = 'TAP Air Portugal';
@@ -587,7 +628,7 @@ const lowerEmail = email.toLocaleLowerCase();
 const trimmedEmail = lowerEmail.trim();
 console.log(trimmedEmail);
 
-// Another Way
+// // Another Way
 
 const normalizedEmail = loginEmail.toLocaleLowerCase().trim();
 console.log(normalizedEmail);
@@ -650,7 +691,7 @@ const capitalizeName = function (name) {
 capitalizeName('jessica ann smith davis');
 capitalizeName('jonas schmedtamnn');
 
-// Padding a String
+// // Padding a String
 
 // Padding a string means to a number of charactes to the string until the string has a certain desire length
 const message = 'Go to gate 23';
